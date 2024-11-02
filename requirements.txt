@@ -1,0 +1,2 @@
+textblob~=0.18.0.post0
+tkmacosx~=1.0.5 # mac only
