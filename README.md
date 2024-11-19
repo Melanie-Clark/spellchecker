@@ -1,4 +1,4 @@
-# spell_checker
+# Spellchecker
 
 Simple spell checker.
 
