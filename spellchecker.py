@@ -8,16 +8,16 @@ from tkmacosx import Button  # Mac only - button background to work
 # Sets up main window
 def create_window():
     root = Tk()
-    root.title('Spelling Checker')
-    root.geometry('750x400')
-    root.config(background='#91D8E4')
+    root.title('Spell Checker')
+    root.geometry('600x300')
+    root.config(background='#FFCCE5')
     return root
 
 
 # GUI elements
 def labels_buttons(root):
     # Spelling Checker header label
-    heading = Label(root, text='Spelling Checker', font=('Arial', 20, 'bold'), bg='#91D8E4', fg='#460C68')
+    heading = Label(root, text='Spelling Checker', font=('Arial', 20, 'bold'), bg='#FFCCE5', fg='#460C68')
     heading.pack(pady=(50, 0))  # puts space between widgets (pad y, pad x)
 
     enter_text = Entry(root, justify='center', width=30, font=('Arial', 20, 'bold'), bg='white', border=2)
@@ -25,16 +25,16 @@ def labels_buttons(root):
     enter_text.focus()
 
     # Correct spelling label
-    cs = Label(root, text='Correct spelling is : ', font=('Arial', 20), bg='#91D8E4', fg='#460C68')
-    cs.place(x=150, y=250)
+    cs = Label(root, text='Correct spelling is : ', font=('Arial', 20), bg='#FFCCE5', fg='#460C68')
+    cs.place(x=100, y=200)
 
     # Spell label
-    spell = Label(root, font=('Arial', 20), bg='#91D8E4', fg='#460C68')
-    spell.place(x=350, y=250)
+    spell = Label(root, font=('Arial', 20), bg='#FFCCE5', fg='#460C68')
+    spell.place(x=300, y=200)
 
     # Check spelling button
     # lambda used to ensure the function is only called when the button is clicked and not when the button is created.
-    check_button = Button(root, text='Check spelling', font=('Arial', 20, 'bold'), bg='#758ED9', fg='white',
+    check_button = Button(root, text='Check spelling', font=('Arial', 20, 'bold'), bg='white', fg='#758ED9',
                           highlightbackground='#758ED9', command=lambda: check_spelling(enter_text, spell))
     check_button.pack()
 
